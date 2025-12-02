@@ -85,7 +85,7 @@ function generateDomainTable(domains) {
   const header = '| # | Domain | 中心の問い | Resources |\n|---|--------|-----------|-----------|';
   const rows = domains.map((d, i) => {
     const total = d.books.total + d.courses.total + d.papers.total;
-    return `| ${i + 1} | [${d.name}](${d.path}) | ${d.question} | ${total} |`;
+    return `| ${i + 1} | <a href="${d.path}" target="_blank" rel="noopener">${d.name}</a> | ${d.question} | ${total} |`;
   });
   return [header, ...rows].join('\n');
 }
