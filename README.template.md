@@ -34,26 +34,13 @@
          （文脈）
 ```
 
-| # | Domain | 中心の問い | Resources |
-|---|--------|-----------|-----------|
-| 1 | [Philosophy & Thought](docs/knowledge-base/philosophy/) | 何が正しいか？ | 33 |
-| 2 | [Psychology & Behavior](docs/knowledge-base/psychology-behavior/) | なぜそう動くか？ | 33 |
-| 3 | [Economics & Incentives](docs/knowledge-base/economics-incentives/) | なぜそう選ぶか？ | 30 |
-| 4 | [Politics & Power](docs/knowledge-base/politics-power/) | 誰が決定権を持つか？ | 33 |
-| 5 | [History & Civilization](docs/knowledge-base/history-civilization/) | なぜそうなったか？ | 33 |
+{{DOMAIN_TABLE}}
 
 ---
 
 ## Layer A: 学習進捗サマリー
 
-| Domain | 📚 Books | 🎬 Courses | 📄 Papers | Total |
-|--------|----------|------------|-----------|-------|
-| Philosophy & Thought | 0/15 | 0/10 | 0/8 | 0/33 |
-| Psychology & Behavior | 0/15 | 0/8 | 0/10 | 0/33 |
-| Economics & Incentives | 0/12 | 0/8 | 0/10 | 0/30 |
-| Politics & Power | 0/15 | 0/8 | 0/10 | 0/33 |
-| History & Civilization | 0/15 | 0/8 | 0/10 | 0/33 |
-| **Total** | **0/72** | **0/42** | **0/48** | **0/162** |
+{{PROGRESS_TABLE}}
 
 ### 学習ソースの基準
 - **Books**: Nobel Prize受賞者、古典、大学標準教科書
@@ -79,11 +66,7 @@
 .
 ├── docs/
 │   ├── knowledge-base/              # Layer A: 5ドメイン
-│   │   ├── philosophy/              # 哲学・思想（33 resources）
-│   │   ├── psychology-behavior/              # 心理・行動（33 resources）
-│   │   ├── economics-incentives/              # 経済・インセンティブ（30 resources）
-│   │   ├── politics-power/              # 政治・権力（33 resources）
-│   │   ├── history-civilization/              # 歴史・文明（33 resources）
+{{DIRECTORY_RESOURCES}}
 │   │   └── frameworks/              # 統合フレームワーク
 │   │
 │   └── career-strategy/             # Layer C: キャリア戦略
@@ -168,6 +151,4 @@ Sapiens → Guns, Germs, and Steel → Rise and Fall of Great Powers
 
 ## 学習記録
 
-| Date | Domain | Resource | Type | Time | Key Takeaways |
-|------|--------|----------|------|------|---------------|
-| | | | | | |
+{{LEARNING_LOG}}

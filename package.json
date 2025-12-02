@@ -1,0 +1,10 @@
+{
+  "name": "persistent-differentiation",
+  "version": "1.0.0",
+  "description": "永続的な差別化領域を構築するためのプロジェクト",
+  "scripts": {
+    "readme": "node scripts/generate-readme.js"
+  },
+  "keywords": ["learning", "knowledge-base", "PPE"],
+  "license": "MIT"
+}

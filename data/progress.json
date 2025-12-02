@@ -1,0 +1,35 @@
+{
+  "domains": [
+    {
+      "id": "philosophy",
+      "name": "Philosophy & Thought",
+      "path": "docs/knowledge-base/philosophy/",
+      "question": "何が正しいか？"
+    },
+    {
+      "id": "psychology",
+      "name": "Psychology & Behavior",
+      "path": "docs/knowledge-base/psychology-behavior/",
+      "question": "なぜそう動くか？"
+    },
+    {
+      "id": "economics",
+      "name": "Economics & Incentives",
+      "path": "docs/knowledge-base/economics-incentives/",
+      "question": "なぜそう選ぶか？"
+    },
+    {
+      "id": "politics",
+      "name": "Politics & Power",
+      "path": "docs/knowledge-base/politics-power/",
+      "question": "誰が決定権を持つか？"
+    },
+    {
+      "id": "history",
+      "name": "History & Civilization",
+      "path": "docs/knowledge-base/history-civilization/",
+      "question": "なぜそうなったか？"
+    }
+  ],
+  "learningLog": []
+}
