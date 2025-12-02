@@ -7,7 +7,7 @@
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │  Layer A: 思想の体系化（Knowledge Base）                      │
-│  行動変容 × 認知科学 × 哲学 の統合フレームワーク                 │
+│  PPE + Psychology + History の統合フレームワーク              │
 ├─────────────────────────────────────────────────────────────┤
 │  Layer B: 行動変容プロダクト（Execution Asset）               │
 │  思想を動かすアプリを一貫して作り続ける                         │
@@ -19,20 +19,57 @@
 
 ---
 
+## Layer A: 5ドメイン構成（MECE）
+
+```
+        Philosophy（判断基準）
+              ↓
+   Psychology ←→ Economics
+   （内面）      （インセンティブ）
+         ↘    ↙
+         Politics
+         （権力）
+              ↓
+         History
+         （文脈）
+```
+
+| # | Domain | 中心の問い | Resources |
+|---|--------|-----------|-----------|
+| 1 | [Philosophy & Thought](docs/knowledge-base/philosophy/) | 何が正しいか？ | 33 |
+| 2 | [Psychology & Behavior](docs/knowledge-base/psychology-behavior/) | なぜそう動くか？ | 33 |
+| 3 | [Economics & Incentives](docs/knowledge-base/economics-incentives/) | なぜそう選ぶか？ | 30 |
+| 4 | [Politics & Power](docs/knowledge-base/politics-power/) | 誰が決定権を持つか？ | 33 |
+| 5 | [History & Civilization](docs/knowledge-base/history-civilization/) | なぜそうなったか？ | 33 |
+
+---
+
 ## Layer A: 学習進捗サマリー
 
 | Domain | 📚 Books | 🎬 Courses | 📄 Papers | Total |
 |--------|----------|------------|-----------|-------|
-| [Behavioral Change](docs/knowledge-base/behavioral-change/) | 0/12 | 0/8 | 0/10 | 0/30 |
-| [Cognitive Science](docs/knowledge-base/cognitive-science/) | 0/12 | 0/8 | 0/10 | 0/30 |
-| [Philosophy](docs/knowledge-base/philosophy/) | 0/15 | 0/10 | 0/8 | 0/33 |
-| **Total** | **0/39** | **0/26** | **0/28** | **0/93** |
+| Philosophy & Thought | 0/15 | 0/10 | 0/8 | 0/33 |
+| Psychology & Behavior | 0/15 | 0/8 | 0/10 | 0/33 |
+| Economics & Incentives | 0/12 | 0/8 | 0/10 | 0/30 |
+| Politics & Power | 0/15 | 0/8 | 0/10 | 0/33 |
+| History & Civilization | 0/15 | 0/8 | 0/10 | 0/33 |
+| **Total** | **0/72** | **0/42** | **0/48** | **0/162** |
 
 ### 学習ソースの基準
-- **Books**: 大学教科書レベル、Nobel Prize受賞者、各分野の古典
+- **Books**: Nobel Prize受賞者、古典、大学標準教科書
 - **Courses**: Harvard, Yale, MIT, Stanford, Oxford の正式講義
 - **Papers**: Science, Nature, 各分野のトップジャーナル
-- **Articles**: McKinsey, BCG, HBR のインサイト記事
+- **Articles**: McKinsey, BCG, HBR, WEF のインサイト
+
+### PPEとの関係
+
+| Oxford PPE | このフレームワーク | 追加要素 |
+|------------|------------------|---------|
+| Politics | Politics & Power | ✓ |
+| Philosophy | Philosophy & Thought | ✓ |
+| Economics | Economics & Incentives | ✓ |
+| - | **Psychology & Behavior** | プロダクト設計の基盤 |
+| - | **History & Civilization** | パターン認識・長期視点 |
 
 ---
 
@@ -41,49 +78,47 @@
 ```
 .
 ├── docs/
-│   ├── knowledge-base/          # Layer A: 思想の体系化
-│   │   ├── behavioral-change/   # 行動変容理論（30 resources）
-│   │   ├── cognitive-science/   # 認知科学（30 resources）
-│   │   ├── philosophy/          # 哲学（33 resources）
-│   │   └── frameworks/          # 統合フレームワーク
+│   ├── knowledge-base/              # Layer A: 5ドメイン
+│   │   ├── philosophy/              # 哲学・思想（33 resources）
+│   │   ├── psychology-behavior/     # 心理・行動（33 resources）
+│   │   ├── economics-incentives/    # 経済・インセンティブ（30 resources）
+│   │   ├── politics-power/          # 政治・権力（33 resources）
+│   │   ├── history-civilization/    # 歴史・文明（33 resources）
+│   │   └── frameworks/              # 統合フレームワーク
 │   │
-│   └── career-strategy/         # Layer C: キャリア戦略
+│   └── career-strategy/             # Layer C: キャリア戦略
 │
 └── apps/
-    └── behavioral-tracker/      # Layer B: 行動変容プロダクト
+    └── behavioral-tracker/          # Layer B: 行動変容プロダクト
 ```
 
 ---
 
-## Layer A: Knowledge Base System
+## 推奨学習順序
 
-### 構成要素
-1. **人間の意思決定モデル**
-2. **習慣形成のメカニズム**（神経科学 × 行動経済学）
-3. **自己認識とメタ認知**
-4. **成長の構造**（難易度曲線、負荷、ドーパミン）
-5. **日本的哲学との統合**（老荘、禅、武士道）
-
-### 推奨学習順序
+### Phase 1: 基盤構築
 ```
-1. 入門
-   Atomic Habits → Thinking, Fast and Slow → Meditations
-
-2. 理論深化
-   Yale講義 → 認知心理学教科書 → 原論文
-
-3. 統合
-   東西哲学比較 → 行動変容理論構築
-
-4. 応用
-   プロダクト設計 → 発信
+Philosophy:  Meditations → Tao Te Ching
+Psychology:  Atomic Habits → Thinking, Fast and Slow
+Economics:   Freakonomics → Art of Strategy
 ```
 
-### 成果物
-- 行動変容理論の体系化
-- note / X での発信
-- 図式・モデルの構築
-- AIコーチの中核アルゴリズム
+### Phase 2: 講義で深化
+```
+Yale: Political Philosophy, Death, Game Theory
+Harvard: Justice
+MIT: Economics
+```
+
+### Phase 3: 歴史で文脈を理解
+```
+Sapiens → Guns, Germs, and Steel → Rise and Fall of Great Powers
+```
+
+### Phase 4: 統合と応用
+```
+古典読解 → パターン認識 → プロダクト設計への接続
+```
 
 ---
 
@@ -117,15 +152,17 @@
 
 ---
 
-## なぜこの3つか
+## なぜこの構成か
 
-| 領域 | 模倣困難性 | 理由 |
-|------|-----------|------|
-| 思想の体系化 | 極めて高い | 経験知 + 言語化能力 + 時間の蓄積 |
-| プロダクト開発 | 高い | 思想とコードの二重構造 |
-| Tech × Human | 高い | 市場に存在しない組み合わせ |
+| 領域 | AI時代に重要な理由 |
+|------|-------------------|
+| 哲学・思想 | AIが答えを出せない「問いの立て方」を持てる |
+| 心理・行動 | 人間を動かすのは人間の理解から |
+| 経済 | インセンティブ設計で行動を変える |
+| 政治・権力 | 意思決定構造と影響力を理解する |
+| 歴史・文明 | パターン認識で未来を予測する |
 
-**この3つが揃うと、テンプレキャリアとは無関係に「唯一の領域」を持てる。**
+**これらを統合できる人材は、市場での代替可能性が極めて低い。**
 
 ---
 
