@@ -36,11 +36,11 @@
 
 | # | Domain | 中心の問い | Resources |
 |---|--------|-----------|-----------|
-| 1 | <a href="docs/knowledge-base/philosophy/" target="_blank" rel="noopener">Philosophy & Thought</a> | 何が正しいか？ | 33 |
-| 2 | <a href="docs/knowledge-base/psychology-behavior/" target="_blank" rel="noopener">Psychology & Behavior</a> | なぜそう動くか？ | 33 |
-| 3 | <a href="docs/knowledge-base/economics-incentives/" target="_blank" rel="noopener">Economics & Incentives</a> | なぜそう選ぶか？ | 30 |
-| 4 | <a href="docs/knowledge-base/politics-power/" target="_blank" rel="noopener">Politics & Power</a> | 誰が決定権を持つか？ | 33 |
-| 5 | <a href="docs/knowledge-base/history-civilization/" target="_blank" rel="noopener">History & Civilization</a> | なぜそうなったか？ | 33 |
+| 1 | [Philosophy & Thought](docs/knowledge-base/philosophy/) | 何が正しいか？ | 33 |
+| 2 | [Psychology & Behavior](docs/knowledge-base/psychology-behavior/) | なぜそう動くか？ | 33 |
+| 3 | [Economics & Incentives](docs/knowledge-base/economics-incentives/) | なぜそう選ぶか？ | 30 |
+| 4 | [Politics & Power](docs/knowledge-base/politics-power/) | 誰が決定権を持つか？ | 33 |
+| 5 | [History & Civilization](docs/knowledge-base/history-civilization/) | なぜそうなったか？ | 33 |
 
 ---
 
@@ -52,8 +52,8 @@
 | Psychology & Behavior | 0/15 | 0/8 | 0/10 | 0/33 |
 | Economics & Incentives | 0/12 | 0/8 | 0/10 | 0/30 |
 | Politics & Power | 0/15 | 0/8 | 0/10 | 0/33 |
-| History & Civilization | 0/15 | 0/8 | 0/10 | 0/33 |
-| **Total** | **0/72** | **0/42** | **0/48** | **0/162** |
+| History & Civilization | 0/15 | 1/8 | 0/10 | 1/33 |
+| **Total** | **0/72** | **1/42** | **0/48** | **1/162** |
 
 ### 学習ソースの基準
 - **Books**: Nobel Prize受賞者、古典、大学標準教科書

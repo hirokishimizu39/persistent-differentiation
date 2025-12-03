@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "永続的な差別化領域を構築するためのプロジェクト",
   "scripts": {
-    "readme": "node scripts/generate-readme.js"
+    "readme": "node scripts/generate-readme.js",
+    "readme:sync": "node scripts/sync-from-issues.js",
+    "issues:create": "node scripts/create-issues.js"
   },
   "keywords": ["learning", "knowledge-base", "PPE"],
   "license": "MIT"
