@@ -1,35 +1,73 @@
 {
-  "domains": [
-    {
-      "id": "philosophy",
-      "name": "Philosophy & Thought",
-      "path": "docs/knowledge-base/philosophy/",
-      "question": "何が正しいか？"
-    },
-    {
-      "id": "psychology",
-      "name": "Psychology & Behavior",
-      "path": "docs/knowledge-base/psychology-behavior/",
-      "question": "なぜそう動くか？"
-    },
-    {
-      "id": "economics",
-      "name": "Economics & Incentives",
-      "path": "docs/knowledge-base/economics-incentives/",
-      "question": "なぜそう選ぶか？"
-    },
-    {
-      "id": "politics",
-      "name": "Politics & Power",
-      "path": "docs/knowledge-base/politics-power/",
-      "question": "誰が決定権を持つか？"
-    },
-    {
-      "id": "history",
-      "name": "History & Civilization",
-      "path": "docs/knowledge-base/history-civilization/",
-      "question": "なぜそうなったか？"
-    }
-  ],
+  "mind": {
+    "label": "Layer A1: Mind（思想の体系化）",
+    "domains": [
+      {
+        "id": "philosophy",
+        "name": "Philosophy & Thought",
+        "path": "docs/knowledge-base/philosophy/",
+        "question": "何が正しいか？"
+      },
+      {
+        "id": "psychology",
+        "name": "Psychology & Behavior",
+        "path": "docs/knowledge-base/psychology-behavior/",
+        "question": "なぜそう動くか？"
+      },
+      {
+        "id": "economics",
+        "name": "Economics & Incentives",
+        "path": "docs/knowledge-base/economics-incentives/",
+        "question": "なぜそう選ぶか？"
+      },
+      {
+        "id": "politics",
+        "name": "Politics & Power",
+        "path": "docs/knowledge-base/politics-power/",
+        "question": "誰が決定権を持つか？"
+      },
+      {
+        "id": "history",
+        "name": "History & Civilization",
+        "path": "docs/knowledge-base/history-civilization/",
+        "question": "なぜそうなったか？"
+      }
+    ]
+  },
+  "body": {
+    "label": "Layer A2: Body（身体の体系化）",
+    "domains": [
+      {
+        "id": "structure",
+        "name": "Structure",
+        "path": "docs/knowledge-base/body-mastery/structure/",
+        "question": "身体はどう構成されているか？"
+      },
+      {
+        "id": "nutrition",
+        "name": "Nutrition",
+        "path": "docs/knowledge-base/body-mastery/nutrition/",
+        "question": "何をどう摂るか？"
+      },
+      {
+        "id": "movement",
+        "name": "Movement",
+        "path": "docs/knowledge-base/body-mastery/movement/",
+        "question": "どう動かすか？"
+      },
+      {
+        "id": "recovery",
+        "name": "Recovery",
+        "path": "docs/knowledge-base/body-mastery/recovery/",
+        "question": "どう休むか？"
+      },
+      {
+        "id": "regulation",
+        "name": "Regulation",
+        "path": "docs/knowledge-base/body-mastery/regulation/",
+        "question": "内部はどう調整されるか？"
+      }
+    ]
+  },
   "learningLog": []
 }

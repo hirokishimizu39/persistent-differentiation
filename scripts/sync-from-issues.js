@@ -10,14 +10,6 @@ const OUTPUT_PATH = path.join(ROOT_DIR, 'README.md');
 const PROGRESS_PATH = path.join(ROOT_DIR, 'data/progress.json');
 const MAPPING_PATH = path.join(ROOT_DIR, 'data/issue-mapping.json');
 
-const DOMAINS = [
-  { id: 'philosophy', dir: 'philosophy', name: 'Philosophy & Thought' },
-  { id: 'psychology', dir: 'psychology-behavior', name: 'Psychology & Behavior' },
-  { id: 'economics', dir: 'economics-incentives', name: 'Economics & Incentives' },
-  { id: 'politics', dir: 'politics-power', name: 'Politics & Power' },
-  { id: 'history', dir: 'history-civilization', name: 'History & Civilization' }
-];
-
 function getIssueBody(issueNumber) {
   try {
     const result = execSync(
@@ -57,7 +49,6 @@ function parseCheckboxesFromIssue(body) {
     }
 
     if (currentSection) {
-      // Match checkbox pattern: - [x] or - [ ]
       const checkedMatch = line.match(/^- \[x\]/i);
       const uncheckedMatch = line.match(/^- \[ \]/);
 
@@ -85,7 +76,35 @@ function loadProgressFromIssues() {
 
   console.log('Fetching progress from GitHub Issues...\n');
 
-  for (const domain of progress.domains) {
+  // Process Mind domains
+  console.log('=== Layer A1: Mind ===');
+  for (const domain of progress.mind.domains) {
+    const issueNumber = mapping[domain.id];
+
+    if (!issueNumber) {
+      console.log(`No issue found for ${domain.name}, skipping...`);
+      domain.books = { completed: 0, total: 0 };
+      domain.courses = { completed: 0, total: 0 };
+      domain.papers = { completed: 0, total: 0 };
+      continue;
+    }
+
+    console.log(`Fetching #${issueNumber}: ${domain.name}...`);
+    const body = getIssueBody(issueNumber);
+    const parsed = parseCheckboxesFromIssue(body);
+
+    domain.books = parsed.books;
+    domain.courses = parsed.courses;
+    domain.papers = parsed.papers;
+
+    const total = parsed.books.completed + parsed.courses.completed + parsed.papers.completed;
+    const max = parsed.books.total + parsed.courses.total + parsed.papers.total;
+    console.log(`  → ${total}/${max} completed`);
+  }
+
+  // Process Body domains
+  console.log('\n=== Layer A2: Body ===');
+  for (const domain of progress.body.domains) {
     const issueNumber = mapping[domain.id];
 
     if (!issueNumber) {
@@ -149,8 +168,8 @@ function generateProgressTable(domains) {
   return [header, ...rows, totalRow].join('\n');
 }
 
-function generateDirectoryResources(domains) {
-  const dirMap = {
+function generateDirectoryResources(domains, prefix) {
+  const mindDirMap = {
     philosophy: { dir: 'philosophy', label: '哲学・思想' },
     psychology: { dir: 'psychology-behavior', label: '心理・行動' },
     economics: { dir: 'economics-incentives', label: '経済・インセンティブ' },
@@ -158,11 +177,22 @@ function generateDirectoryResources(domains) {
     history: { dir: 'history-civilization', label: '歴史・文明' }
   };
 
+  const bodyDirMap = {
+    structure: { dir: 'body-mastery/structure', label: '構造・機能' },
+    nutrition: { dir: 'body-mastery/nutrition', label: '栄養' },
+    movement: { dir: 'body-mastery/movement', label: '運動' },
+    recovery: { dir: 'body-mastery/recovery', label: '回復' },
+    regulation: { dir: 'body-mastery/regulation', label: '調整' }
+  };
+
+  const dirMap = prefix === 'mind' ? mindDirMap : bodyDirMap;
+
   return domains.map(d => {
     const info = dirMap[d.id];
+    if (!info) return '';
     const total = d.books.total + d.courses.total + d.papers.total;
     return `│   │   ├── ${info.dir}/              # ${info.label}（${total} resources）`;
-  }).join('\n');
+  }).filter(Boolean).join('\n');
 }
 
 function generateLearningLog(learningLog) {
@@ -184,9 +214,12 @@ function generate() {
   const progress = loadProgressFromIssues();
 
   let readme = template
-    .replace('{{DOMAIN_TABLE}}', generateDomainTable(progress.domains))
-    .replace('{{PROGRESS_TABLE}}', generateProgressTable(progress.domains))
-    .replace('{{DIRECTORY_RESOURCES}}', generateDirectoryResources(progress.domains))
+    .replace('{{MIND_DOMAIN_TABLE}}', generateDomainTable(progress.mind.domains))
+    .replace('{{MIND_PROGRESS_TABLE}}', generateProgressTable(progress.mind.domains))
+    .replace('{{MIND_DIRECTORY_RESOURCES}}', generateDirectoryResources(progress.mind.domains, 'mind'))
+    .replace('{{BODY_DOMAIN_TABLE}}', generateDomainTable(progress.body.domains))
+    .replace('{{BODY_PROGRESS_TABLE}}', generateProgressTable(progress.body.domains))
+    .replace('{{BODY_DIRECTORY_RESOURCES}}', generateDirectoryResources(progress.body.domains, 'body'))
     .replace('{{LEARNING_LOG}}', generateLearningLog(progress.learningLog));
 
   fs.writeFileSync(OUTPUT_PATH, readme);

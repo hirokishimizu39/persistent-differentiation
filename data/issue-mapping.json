@@ -1,7 +1,12 @@
 {
-  "philosophy": "1",
-  "psychology": "2",
-  "economics": "3",
-  "politics": "4",
-  "history": "5"
+  "philosophy": 1,
+  "psychology": 2,
+  "economics": 3,
+  "politics": 4,
+  "history": 5,
+  "structure": "6",
+  "nutrition": "7",
+  "movement": "8",
+  "recovery": "9",
+  "regulation": "10"
 }

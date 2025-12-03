@@ -2,12 +2,15 @@
 
 長期的にコモディティ化されない「永続的な差別化領域」を構築するためのプロジェクト。
 
-## 3つのレイヤー構造
+## レイヤー構造
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  Layer A: 思想の体系化（Knowledge Base）                      │
+│  Layer A1: Mind（思想の体系化）                               │
 │  PPE + Psychology + History の統合フレームワーク              │
+├─────────────────────────────────────────────────────────────┤
+│  Layer A2: Body（身体の体系化）                               │
+│  Structure + Nutrition + Movement + Recovery + Regulation   │
 ├─────────────────────────────────────────────────────────────┤
 │  Layer B: 行動変容プロダクト（Execution Asset）               │
 │  思想を動かすアプリを一貫して作り続ける                         │
@@ -19,7 +22,7 @@
 
 ---
 
-## Layer A: 5ドメイン構成（MECE）
+## Layer A1: Mind（思想の体系化）
 
 ```
         Philosophy（判断基準）
@@ -34,29 +37,44 @@
          （文脈）
 ```
 
-{{DOMAIN_TABLE}}
+{{MIND_DOMAIN_TABLE}}
+
+### 学習進捗サマリー
+
+{{MIND_PROGRESS_TABLE}}
 
 ---
 
-## Layer A: 学習進捗サマリー
+## Layer A2: Body（身体の体系化）
 
-{{PROGRESS_TABLE}}
+```
+        Structure（土台）
+        解剖学・生理学
+              ↓
+    Nutrition ←→ Movement
+    （入力）      （出力）
+         ↘    ↙
+         Recovery
+         （回復）
+              ↓
+        Regulation
+        （調整）
+```
 
-### 学習ソースの基準
+{{BODY_DOMAIN_TABLE}}
+
+### 学習進捗サマリー
+
+{{BODY_PROGRESS_TABLE}}
+
+---
+
+## 学習ソースの基準
+
 - **Books**: Nobel Prize受賞者、古典、大学標準教科書
 - **Courses**: Harvard, Yale, MIT, Stanford, Oxford の正式講義
 - **Papers**: Science, Nature, 各分野のトップジャーナル
 - **Articles**: McKinsey, BCG, HBR, WEF のインサイト
-
-### PPEとの関係
-
-| Oxford PPE | このフレームワーク | 追加要素 |
-|------------|------------------|---------|
-| Politics | Politics & Power | ✓ |
-| Philosophy | Philosophy & Thought | ✓ |
-| Economics | Economics & Incentives | ✓ |
-| - | **Psychology & Behavior** | プロダクト設計の基盤 |
-| - | **History & Civilization** | パターン認識・長期視点 |
 
 ---
 
@@ -65,42 +83,19 @@
 ```
 .
 ├── docs/
-│   ├── knowledge-base/              # Layer A: 5ドメイン
-{{DIRECTORY_RESOURCES}}
+│   ├── knowledge-base/
+│   │   ├── # Layer A1: Mind
+{{MIND_DIRECTORY_RESOURCES}}
+│   │   │
+│   │   ├── # Layer A2: Body
+{{BODY_DIRECTORY_RESOURCES}}
+│   │   │
 │   │   └── frameworks/              # 統合フレームワーク
 │   │
 │   └── career-strategy/             # Layer C: キャリア戦略
 │
 └── apps/
     └── behavioral-tracker/          # Layer B: 行動変容プロダクト
-```
-
----
-
-## 推奨学習順序
-
-### Phase 1: 基盤構築
-```
-Philosophy:  Meditations → Tao Te Ching
-Psychology:  Atomic Habits → Thinking, Fast and Slow
-Economics:   Freakonomics → Art of Strategy
-```
-
-### Phase 2: 講義で深化
-```
-Yale: Political Philosophy, Death, Game Theory
-Harvard: Justice
-MIT: Economics
-```
-
-### Phase 3: 歴史で文脈を理解
-```
-Sapiens → Guns, Germs, and Steel → Rise and Fall of Great Powers
-```
-
-### Phase 4: 統合と応用
-```
-古典読解 → パターン認識 → プロダクト設計への接続
 ```
 
 ---
@@ -139,13 +134,20 @@ Sapiens → Guns, Germs, and Steel → Rise and Fall of Great Powers
 
 | 領域 | AI時代に重要な理由 |
 |------|-------------------|
+| **Mind** | |
 | 哲学・思想 | AIが答えを出せない「問いの立て方」を持てる |
 | 心理・行動 | 人間を動かすのは人間の理解から |
 | 経済 | インセンティブ設計で行動を変える |
 | 政治・権力 | 意思決定構造と影響力を理解する |
 | 歴史・文明 | パターン認識で未来を予測する |
+| **Body** | |
+| 構造 | 身体の仕組みを理解する土台 |
+| 栄養 | 入力の最適化で基盤を作る |
+| 運動 | 出力の最適化でパフォーマンスを上げる |
+| 回復 | 休息の質が持続可能性を決める |
+| 調整 | ホルモン・神経系で全体を統合 |
 
-**これらを統合できる人材は、市場での代替可能性が極めて低い。**
+**Mind × Body を統合できる人材は、市場での代替可能性が極めて低い。**
 
 ---
 

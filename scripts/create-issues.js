@@ -6,13 +6,23 @@ const path = require('path');
 
 const ROOT_DIR = path.join(__dirname, '..');
 const DOCS_DIR = path.join(ROOT_DIR, 'docs/knowledge-base');
+const PROGRESS_PATH = path.join(ROOT_DIR, 'data/progress.json');
+const MAPPING_PATH = path.join(ROOT_DIR, 'data/issue-mapping.json');
 
-const DOMAINS = [
+const MIND_DOMAINS = [
   { id: 'philosophy', dir: 'philosophy', name: 'Philosophy & Thought', emoji: '🏛️' },
   { id: 'psychology', dir: 'psychology-behavior', name: 'Psychology & Behavior', emoji: '🧠' },
   { id: 'economics', dir: 'economics-incentives', name: 'Economics & Incentives', emoji: '💰' },
   { id: 'politics', dir: 'politics-power', name: 'Politics & Power', emoji: '⚖️' },
   { id: 'history', dir: 'history-civilization', name: 'History & Civilization', emoji: '📜' }
+];
+
+const BODY_DOMAINS = [
+  { id: 'structure', dir: 'body-mastery/structure', name: 'Structure', emoji: '🦴' },
+  { id: 'nutrition', dir: 'body-mastery/nutrition', name: 'Nutrition', emoji: '🥗' },
+  { id: 'movement', dir: 'body-mastery/movement', name: 'Movement', emoji: '🏃' },
+  { id: 'recovery', dir: 'body-mastery/recovery', name: 'Recovery', emoji: '😴' },
+  { id: 'regulation', dir: 'body-mastery/regulation', name: 'Regulation', emoji: '⚡' }
 ];
 
 function parseResourcesFromMarkdown(content) {
@@ -37,8 +47,16 @@ function parseResourcesFromMarkdown(content) {
     }
 
     if (currentSection && line.includes('|')) {
-      // Parse table row: | # | [Title](url) | Author | ...
-      const match = line.match(/\|\s*\d+\s*\|\s*\[([^\]]+)\]\(([^)]+)\)\s*\|([^|]+)\|/);
+      // Parse table row: | # | [Title](url) | Author | ... or | # | <a href="url">Title</a> | Author | ...
+      let match = line.match(/\|\s*\d+\s*\|\s*\[([^\]]+)\]\(([^)]+)\)\s*\|([^|]+)\|/);
+      if (!match) {
+        // Try HTML link format
+        match = line.match(/\|\s*\d+\s*\|\s*<a[^>]*href="([^"]+)"[^>]*>([^<]+)<\/a>\s*\|([^|]+)\|/);
+        if (match) {
+          // Reorder for consistency: [, title, url, author]
+          match = [match[0], match[2], match[1], match[3]];
+        }
+      }
       if (match) {
         const [, title, url, author] = match;
         const isChecked = line.includes('[x]') || line.includes('[X]');
@@ -55,8 +73,9 @@ function parseResourcesFromMarkdown(content) {
   return resources;
 }
 
-function generateIssueBody(domain, resources) {
+function generateIssueBody(domain, resources, layer) {
   let body = `# ${domain.emoji} ${domain.name} Learning Progress\n\n`;
+  body += `**Layer**: ${layer}\n\n`;
   body += `Track your learning progress for ${domain.name}.\n`;
   body += `Click checkboxes to mark items as completed.\n\n`;
   body += `---\n\n`;
@@ -91,7 +110,7 @@ function generateIssueBody(domain, resources) {
   return body;
 }
 
-function createOrUpdateIssue(domain, body) {
+function createOrUpdateIssue(domain, body, label) {
   const title = `[Learning] ${domain.emoji} ${domain.name}`;
 
   // Check if issue already exists
@@ -105,8 +124,8 @@ function createOrUpdateIssue(domain, body) {
     if (issues.length > 0 && issues[0].title === title) {
       console.log(`Updating existing issue #${issues[0].number}: ${title}`);
       execSync(
-        `gh issue edit ${issues[0].number} --body "${body.replace(/"/g, '\\"').replace(/\n/g, '\\n')}"`,
-        { cwd: ROOT_DIR, stdio: 'inherit' }
+        `gh issue edit ${issues[0].number} --body-file -`,
+        { input: body, cwd: ROOT_DIR, stdio: ['pipe', 'inherit', 'inherit'] }
       );
       return issues[0].number;
     }
@@ -117,7 +136,7 @@ function createOrUpdateIssue(domain, body) {
   // Create new issue
   console.log(`Creating new issue: ${title}`);
   const result = execSync(
-    `gh issue create --title "${title}" --label "learning" --body-file -`,
+    `gh issue create --title "${title}" --label "${label}" --body-file -`,
     { input: body, encoding: 'utf-8', cwd: ROOT_DIR }
   );
   console.log(`Created: ${result.trim()}`);
@@ -126,24 +145,38 @@ function createOrUpdateIssue(domain, body) {
   return issueNumber;
 }
 
-function ensureLabelExists() {
-  try {
-    execSync('gh label create learning --color 0E8A16 --description "Learning progress tracking"',
-      { cwd: ROOT_DIR, stdio: 'pipe' });
-    console.log('Created "learning" label');
-  } catch (e) {
-    // Label already exists
+function ensureLabelsExist() {
+  const labels = [
+    { name: 'learning', color: '0E8A16', description: 'Learning progress tracking' },
+    { name: 'mind', color: '5319E7', description: 'Layer A1: Mind domains' },
+    { name: 'body', color: 'D93F0B', description: 'Layer A2: Body domains' }
+  ];
+
+  for (const label of labels) {
+    try {
+      execSync(`gh label create ${label.name} --color ${label.color} --description "${label.description}"`,
+        { cwd: ROOT_DIR, stdio: 'pipe' });
+      console.log(`Created "${label.name}" label`);
+    } catch (e) {
+      // Label already exists
+    }
   }
 }
 
 function main() {
   console.log('Creating GitHub Issues for learning progress...\n');
 
-  ensureLabelExists();
+  ensureLabelsExist();
 
-  const issueNumbers = {};
+  // Load existing mapping or create new
+  let issueNumbers = {};
+  if (fs.existsSync(MAPPING_PATH)) {
+    issueNumbers = JSON.parse(fs.readFileSync(MAPPING_PATH, 'utf-8'));
+  }
 
-  for (const domain of DOMAINS) {
+  // Process Mind domains
+  console.log('\n=== Layer A1: Mind ===\n');
+  for (const domain of MIND_DOMAINS) {
     const readmePath = path.join(DOCS_DIR, domain.dir, 'README.md');
 
     if (!fs.existsSync(readmePath)) {
@@ -153,16 +186,33 @@ function main() {
 
     const content = fs.readFileSync(readmePath, 'utf-8');
     const resources = parseResourcesFromMarkdown(content);
-    const body = generateIssueBody(domain, resources);
+    const body = generateIssueBody(domain, resources, 'A1: Mind');
 
-    const issueNumber = createOrUpdateIssue(domain, body);
+    const issueNumber = createOrUpdateIssue(domain, body, 'learning,mind');
+    issueNumbers[domain.id] = issueNumber;
+  }
+
+  // Process Body domains
+  console.log('\n=== Layer A2: Body ===\n');
+  for (const domain of BODY_DOMAINS) {
+    const readmePath = path.join(DOCS_DIR, domain.dir, 'README.md');
+
+    if (!fs.existsSync(readmePath)) {
+      console.log(`Skipping ${domain.name}: README.md not found`);
+      continue;
+    }
+
+    const content = fs.readFileSync(readmePath, 'utf-8');
+    const resources = parseResourcesFromMarkdown(content);
+    const body = generateIssueBody(domain, resources, 'A2: Body');
+
+    const issueNumber = createOrUpdateIssue(domain, body, 'learning,body');
     issueNumbers[domain.id] = issueNumber;
   }
 
   // Save issue numbers for sync script
-  const mappingPath = path.join(ROOT_DIR, 'data/issue-mapping.json');
-  fs.writeFileSync(mappingPath, JSON.stringify(issueNumbers, null, 2));
-  console.log(`\nIssue mapping saved to ${mappingPath}`);
+  fs.writeFileSync(MAPPING_PATH, JSON.stringify(issueNumbers, null, 2));
+  console.log(`\nIssue mapping saved to ${MAPPING_PATH}`);
 }
 
 main();
