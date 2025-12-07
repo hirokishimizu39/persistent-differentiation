@@ -58,7 +58,7 @@
 | 1 | <a href="https://www.youtube.com/playlist?list=PL6A08EB4EEFF3E91F" target="_blank" rel="noopener">Introduction to Psychology</a> | Yale (Paul Bloom) | 20 hrs | [ ] | 心理学入門の名講義 | |
 | 2 | <a href="https://www.coursera.org/learn/the-science-of-well-being" target="_blank" rel="noopener">The Science of Well-Being</a> | Yale (Laurie Santos) | 19 hrs | [ ] | Yale最人気講義 | |
 | 3 | <a href="https://www.coursera.org/learn/learning-how-to-learn" target="_blank" rel="noopener">Learning How to Learn</a> | UC San Diego | 15 hrs | [ ] | 学習の科学 | |
-| 4 | <a href="https://www.coursera.org/learn/predictably-irrational" target="_blank" rel="noopener">A Beginner's Guide to Irrational Behavior</a> | Duke (Dan Ariely) | 12 hrs | [ ] | 行動経済学 | |
+| 4 | <a href="https://www.coursera.org/learn/duke-behavioral-finance" target="_blank" rel="noopener">Behavioral Finance</a> | Duke University | 10 hrs | [ ] | 行動ファイナンス。意思決定のバイアス | |
 
 ### Expert Talks
 

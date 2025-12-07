@@ -57,10 +57,10 @@
 
 | # | Title | Source | Duration | Status | Notes | Date |
 |---|-------|--------|----------|--------|-------|------|
-| 1 | [Nutrition Science](https://www.coursera.org/learn/nutrition-health) | Stanford | 6 wks | [ ] | 栄養と健康 | |
-| 2 | [Introduction to Food and Health](https://www.coursera.org/learn/food-and-health) | Stanford | 5 wks | [ ] | 食と健康の基礎 | |
+| 1 | [Stanford Introduction to Food and Health](https://www.coursera.org/learn/food-and-health) | Stanford | 6 wks | [ ] | 栄養と健康の基礎 | |
+| 2 | [Child Nutrition and Cooking](https://www.coursera.org/learn/childnutrition) | Stanford | 5 wks | [ ] | 子どもの栄養と料理 | |
 | 3 | [Science of Gastronomy](https://www.coursera.org/learn/gastronomy) | Hong Kong | 6 wks | [ ] | 食の科学 | |
-| 4 | [Nutrition for Health](https://www.edx.org/course/nutrition-for-health-promotion-and-disease-prevention) | UC Davis | 6 wks | [ ] | 疾病予防と栄養 | |
+| 4 | [Nutrition and Health: Macronutrients and Overnutrition](https://www.edx.org/course/nutrition-and-health-macronutrients-and-overnutrit) | Wageningen | 6 wks | [ ] | 栄養素と健康 | |
 
 ### Expert Content
 

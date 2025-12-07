@@ -57,8 +57,8 @@
 |---|-------|--------|----------|--------|-------|------|
 | 1 | <a href="https://www.youtube.com/playlist?list=PLBDA2E52FB1EF80C9" target="_blank" rel="noopener">World History</a> | Yale (John Merriman) | 24 hrs | [ ] | 近代ヨーロッパ史 | |
 | 2 | <a href="https://www.youtube.com/playlist?list=PL55F45A5F6EE5E05E" target="_blank" rel="noopener">The Ancient World</a> | Yale (Donald Kagan) | 24 hrs | [ ] | 古代ギリシャ史 | |
-| 3 | <a href="https://www.coursera.org/learn/modern-world" target="_blank" rel="noopener">History of the World since 1500</a> | Princeton | 8 wks | [ ] | 近代世界史 | |
-| 4 | <a href="https://www.edx.org/course/china-x" target="_blank" rel="noopener">China's First Empires</a> | Harvard | 10 wks | [ ] | 中国史 | |
+| 3 | <a href="https://www.coursera.org/learn/modern-world-2" target="_blank" rel="noopener">The Modern World: Global History since 1910</a> | University of Virginia | 8 wks | [ ] | 近代世界史 | |
+| 4 | <a href="https://www.harvardonline.harvard.edu/course/chinas-first-empires-rise-buddhism" target="_blank" rel="noopener">China's First Empires and the Rise of Buddhism</a> | Harvard | 10 wks | [ ] | 秦・漢王朝と仏教 | |
 
 ### Documentary / Expert Talks
 

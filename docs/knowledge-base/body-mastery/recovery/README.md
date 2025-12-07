@@ -60,7 +60,7 @@
 | 1 | [The Science of Well-Being](https://www.coursera.org/learn/the-science-of-well-being) | Yale (Laurie Santos) | 10 wks | [ ] | Yale最人気講義 | |
 | 2 | [Sleep: Neurobiology, Medicine, and Society](https://www.coursera.org/learn/sleep) | Michigan | 4 wks | [ ] | 睡眠の神経生物学 | |
 | 3 | [Stress Management](https://www.coursera.org/specializations/stress-management) | Arizona State | 8 wks | [ ] | ストレス管理 | |
-| 4 | [Mindfulness for Well-being](https://www.futurelearn.com/courses/mindfulness-wellbeing-performance) | Monash | 6 wks | [ ] | マインドフルネス | |
+| 4 | [Mindfulness and Well-being Specialization](https://www.coursera.org/specializations/mindfulness-and-well-being) | Rice University | 6 wks | [ ] | マインドフルネスと幸福 | |
 
 ### Expert Content
 

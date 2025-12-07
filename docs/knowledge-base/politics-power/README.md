@@ -58,7 +58,7 @@
 | 1 | <a href="https://www.youtube.com/playlist?list=PL2FD48CE33DFBEA7E" target="_blank" rel="noopener">Introduction to Political Philosophy</a> | Yale (Steven Smith) | 24 hrs | [ ] | 政治哲学の名講義 | |
 | 2 | <a href="https://www.youtube.com/playlist?list=PLh9mgdi4rNeyViG2ar68jkgEi4y6doNZy" target="_blank" rel="noopener">Power and Politics in Today's World</a> | Yale (Ian Shapiro) | 24 hrs | [ ] | 現代政治分析 | |
 | 3 | <a href="https://www.youtube.com/playlist?list=PL30C13C91CFFEFEA6" target="_blank" rel="noopener">Justice</a> | Harvard (Michael Sandel) | 12 hrs | [ ] | Harvard最人気講義 | |
-| 4 | <a href="https://www.coursera.org/learn/international-relations-theory" target="_blank" rel="noopener">International Relations</a> | University of London | 6 wks | [ ] | 国際関係理論 | |
+| 4 | <a href="https://www.coursera.org/learn/understanding-international-relations-10434" target="_blank" rel="noopener">Understanding International Relations Theory</a> | HSE University | 6 wks | [ ] | 国際関係理論 | |
 
 ### Expert Talks
 
@@ -87,8 +87,8 @@
 
 | # | Title | Source | Year | Status | Notes | Date |
 |---|-------|--------|------|--------|-------|------|
-| 6 | <a href="https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/geopolitics-and-business-strategy" target="_blank" rel="noopener">Geopolitics and Business Strategy</a> | McKinsey | 2022 | [ ] | 地政学リスク | |
-| 7 | <a href="https://www.bcg.com/publications/2023/ai-and-the-future-of-democracy" target="_blank" rel="noopener">The Future of Democracy</a> | BCG | 2023 | [ ] | AIと民主主義 | |
+| 6 | <a href="https://www.mckinsey.com/capabilities/geopolitics/our-insights" target="_blank" rel="noopener">Geopolitics Insights</a> | McKinsey | ongoing | [ ] | 地政学リスクと戦略 | |
+| 7 | <a href="https://www.brookings.edu/articles/how-ai-will-transform-the-2024-elections/" target="_blank" rel="noopener">How AI Will Transform Elections</a> | Brookings | 2024 | [ ] | AIと選挙・民主主義 | |
 | 8 | <a href="https://www.weforum.org/publications/global-risks-report-2024/" target="_blank" rel="noopener">Global Risks Report</a> | WEF | 2024 | [ ] | 世界経済フォーラム | |
 | 9 | <a href="https://www.foreignaffairs.com/" target="_blank" rel="noopener">Foreign Affairs</a> | CFR | ongoing | [ ] | 国際関係の権威誌 | |
 | 10 | <a href="https://www.eiu.com/" target="_blank" rel="noopener">The Economist Intelligence Unit</a> | EIU | ongoing | [ ] | 政治経済分析 | |

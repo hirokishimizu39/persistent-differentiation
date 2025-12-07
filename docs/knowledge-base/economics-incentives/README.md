@@ -87,7 +87,7 @@
 | 6 | <a href="https://www.mckinsey.com/featured-insights/the-next-normal" target="_blank" rel="noopener">The Next Normal</a> | McKinsey | 2020 | [ ] | パンデミック後の経済 | |
 | 7 | <a href="https://hbr.org/2016/04/pipelines-platforms-and-the-new-rules-of-strategy" target="_blank" rel="noopener">Platform Economics</a> | HBR | 2016 | [ ] | プラットフォーム戦略 | |
 | 8 | <a href="https://www.mckinsey.com/capabilities/sustainability/our-insights" target="_blank" rel="noopener">The Economics of Climate Change</a> | McKinsey | 2022 | [ ] | 気候変動の経済学 | |
-| 9 | <a href="https://www.bcg.com/publications/2021/future-of-work-post-pandemic" target="_blank" rel="noopener">The Future of Work</a> | BCG | 2021 | [ ] | 労働市場の変化 | |
+| 9 | <a href="https://www.bcg.com/publications/2021/identifying-postpandemic-work-model" target="_blank" rel="noopener">The How-To of Hybrid Work</a> | BCG | 2021 | [ ] | ハイブリッドワークモデルの設計 | |
 | 10 | <a href="https://hbr.org/2020/01/competing-in-the-age-of-ai" target="_blank" rel="noopener">Competing in the Age of AI</a> | HBR | 2020 | [ ] | AI時代の競争 | |
 
 ---

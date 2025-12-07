@@ -107,10 +107,10 @@
 
 | # | Title | Source | Year | Status | Notes | Date |
 |---|-------|--------|------|--------|-------|------|
-| 5 | <a href="https://hbr.org/2015/01/the-ceos-guide-to-mindfulness" target="_blank" rel="noopener">The CEO's Guide to Mindfulness</a> | HBR | 2015 | [ ] | マインドフルネスの経営応用 | |
-| 6 | <a href="https://hbr.org/2014/03/mindfulness-in-the-age-of-complexity" target="_blank" rel="noopener">Mindfulness in the Age of Complexity</a> | HBR | 2014 | [ ] | Ellen Langer教授 | |
-| 7 | <a href="https://www.mckinsey.com/featured-insights/leadership/the-stoic-ceo" target="_blank" rel="noopener">The Stoic CEO</a> | McKinsey | 2020 | [ ] | ストア哲学とリーダーシップ | |
-| 8 | <a href="https://hbr.org/2017/11/how-philosophy-makes-you-a-better-leader" target="_blank" rel="noopener">How Philosophy Makes You a Better Leader</a> | HBR | 2017 | [ ] | 哲学とリーダーシップ | |
+| 5 | <a href="https://hbr.org/2014/03/mindfulness-in-the-age-of-complexity" target="_blank" rel="noopener">Mindfulness in the Age of Complexity</a> | HBR | 2014 | [ ] | Ellen Langer教授。マインドフルネスと複雑性 | |
+| 6 | <a href="https://hbr.org/2014/10/why-your-brain-loves-good-storytelling" target="_blank" rel="noopener">Why Your Brain Loves Good Storytelling</a> | HBR | 2014 | [ ] | Paul Zak。神経科学とストーリーテリング | |
+| 7 | <a href="https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/the-mindsets-and-practices-of-excellent-ceos" target="_blank" rel="noopener">The Mindsets and Practices of Excellent CEOs</a> | McKinsey | 2019 | [ ] | CEOのマインドセットと実践 | |
+| 8 | <a href="https://hbr.org/2014/09/how-philosophy-makes-you-a-better-leader" target="_blank" rel="noopener">How Philosophy Makes You a Better Leader</a> | HBR | 2014 | [ ] | 哲学とリーダーシップ | |
 
 ---
 

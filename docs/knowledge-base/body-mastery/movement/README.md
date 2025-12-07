@@ -1,3 +1,4 @@
+
 # Movement（運動）
 
 **中心の問い**: どう動かすか？
@@ -57,8 +58,8 @@
 
 | # | Title | Source | Duration | Status | Notes | Date |
 |---|-------|--------|----------|--------|-------|------|
-| 1 | [Exercise Physiology](https://www.coursera.org/learn/exercise-physiology) | Colorado | 8 wks | [ ] | 運動生理学入門 | |
-| 2 | [Science of Exercise](https://www.coursera.org/learn/science-exercise) | Colorado | 8 wks | [ ] | 運動科学 | |
+| 1 | [Science of Exercise](https://www.coursera.org/learn/science-exercise) | Colorado | 8 wks | [ ] | 運動生理学入門 | |
+| 2 | [Exercise Physiology: Understanding the Athlete Within](https://www.classcentral.com/course/exphys-497) | University of Melbourne | 6 wks | [ ] | アスリートの生理学 | |
 | 3 | [Biohacking Your Brain's Health](https://www.coursera.org/learn/biohacking-your-brains-health) | Emory | 4 wks | [ ] | 脳と運動 | |
 | 4 | [NSCA CSCS Prep](https://www.nsca.com/certification/cscs/) | NSCA | 40+ hrs | [ ] | 公認資格プログラム | |
 
