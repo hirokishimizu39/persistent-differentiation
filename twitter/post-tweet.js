@@ -49,10 +49,12 @@ function parseTweetsFromMarkdown(content) {
       isInTweet = true;
       isPosted = false;
     } else if (isInTweet) {
-      if (line.includes('[POSTED]')) {
+      if (line.includes('[POSTED')) {
         isPosted = true;
+        // [POSTED ...] 行は投稿内容に含めない
+      } else {
+        currentTweet.push(line);
       }
-      currentTweet.push(line);
     }
   }
 
