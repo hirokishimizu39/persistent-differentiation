@@ -3,8 +3,10 @@
     {
       "id": 1,
       "content": "学習で大切なのは「量」より「質」より「継続」。\n\n毎日5分でも、1年続ければ30時間。\n週末に6時間やっても、続かなければゼロ。\n\n小さく始めて、止めないこと。",
-      "posted": false,
-      "source": "original"
+      "posted": true,
+      "source": "original",
+      "postedAt": "2025-12-10T05:21:01.956Z",
+      "tweetId": "1998623970443022811"
     },
     {
       "id": 2,
