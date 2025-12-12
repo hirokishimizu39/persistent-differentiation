@@ -7,6 +7,14 @@
     "readme:sync": "node scripts/sync-from-issues.js",
     "issues:create": "node scripts/create-issues.js"
   },
-  "keywords": ["learning", "knowledge-base", "PPE"],
-  "license": "MIT"
+  "keywords": [
+    "learning",
+    "knowledge-base",
+    "PPE"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "twitter-api-v2": "^1.28.0"
+  }
 }
